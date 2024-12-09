@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the thrilling attractions and amenities at Sanjalika Water Park. Learn about our park, attractions, and facilities.">
+  <title>Park Information - Sanjalika Water Park</title>
+ 
+</head>
+<style>
+    /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color:#f4f4f4;
+}
+
+/* Header Styling */
+header {
+  background-color:lightseagreen; /* Water-themed blue */
+  color:black;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+ /* Hero Section */
+ .hero {
+    background-image: url('Images/resort-981750_1280.jpg'); /* Change to your banner image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background-color: #ff5f00; /* Orange for the button */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+
+/* Park Information Section */
+.park-info {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.park-info h2 {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.park-info p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* Main Attractions */
+.park-attractions {
+  margin-bottom: 40px;
+}
+
+.park-attractions h3 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.attraction {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.attraction-image {
+  width: 1200px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.attraction-info {
+  flex: 1; /* Ensures the text takes up the remaining space */
+}
+
+.attraction-info h4 {
+  font-size: 1.8rem;
+  color: #005f73;
+}
+
+.attraction-info p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+
+/* Park Facilities */
+.park-facilities {
+  margin-bottom: 40px;
+}
+
+.park-facilities h3 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.park-facilities ul {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.park-facilities li {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Park History */
+.park-history {
+  margin-bottom: 40px;
+}
+
+.park-history h3 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.park-history p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+ /* Footer Section */
+ footer {
+  background-color: lightseagreen;  /* Gradient for modern look */
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links ul li {
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color:black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff5f00; /* Orange color on hover */
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social ul li {
+  margin: 0;
+}
+
+.footer-social ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  background-color:#ff5f00;
+  transform: scale(1.1);
+}
+
+.footer-social .facebook:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .twitter:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .instagram:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .linkedin:hover {
+  background-color: #ff5f00;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: rgb(8, 2, 2);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .hero .btn {
+      font-size: 1rem;
+    }
+  }
+</style>
+<body>
+  <!-- Header Section (Same as Home Page) -->
+  <header>
+    <div class="logo">
+      <h1>Sanjilika Water Park</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="parkinformation.html">Park Information</a></li>
+        <li><a href="ridesandslides.html">Rides & Slides</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="foodzone.html">Food Zone</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="locationmap.html">Location Map</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+ <!-- Hero Section -->
+ <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Sanjalika Water Park</h1>
+      <p>The ultimate water adventure awaits! Book your tickets now.</p>
+      <a href="index.html" class="btn">Book Now</a>
+    </div>
+  </section>
+  <!-- Park Information Section -->
+  <section id="park-info" class="park-info">
+    <div class="container">
+      <h2  style="color: lightseagreen;">Welcome to Sanjalika Water Park</h2>
+      <p>Discover the largest water park in the region, filled with thrilling rides, fun-filled slides, and exciting attractions for visitors of all ages. Whether you’re looking for an adrenaline rush or a relaxing experience, we have something for everyone!</p>
+      <hr>
+      <div class="park-attractions">
+        <h3  style="color: lightseagreen;">Main Attractions</h3>
+        <div class="attraction">
+          <img src="Images/cave.png" alt="The Giant Cave" class="attraction-image" >
+          <div class="attraction-info">
+            <h4  style="color: lightseagreen;">The Giant Cave</h4>
+            <p>This one-of-a-kind attraction is designed for thrill-seekers, families, and anyone who loves the mysterious allure of underground exploration. The Giant Cave is not just a water-based attraction—it's an entire immersive experience. As you step inside, you’ll leave the outside world behind and enter a realm of cool, sparkling waters, twisting tunnels, and unexpected surprises. Here’s everything you need to know about this thrilling water cave adventure!</p>
+          </div>
+        </div>
+        <div class="attraction">
+          <img src="Images/wave pool.jpg" alt="Wave Pool" class="attraction-image" >
+          <div class="attraction-info">
+            <h4  style="color: lightseagreen;">Wave Pool</h4>
+            <p>Experience the thrill of the ocean right in the heart of our water park! Our Massive Wave Pool offers the ultimate beach-like experience for visitors of all ages. Whether you’re a beginner testing the waters or an experienced swimmer looking for a challenge, the Wave Pool has something for everyone. It’s one of our most popular attractions, drawing guests from all over for the chance to ride the waves in a safe and exciting environment. Here’s everything you need to know about this incredible water feature!
+
+            </p>
+          </div>
+        </div>
+      </div>
+<hr>
+      <div class="park-facilities">
+        <h3  style="color: lightseagreen;">Park Facilities</h3>
+        <ul>
+          <li>Changing Rooms and Lockers</li>
+          <li>Food and Beverage Stalls</li>
+          <li>First Aid Stations</li>
+          <li>Free Wi-Fi in Designated Areas</li>
+          <li>Baby Care Rooms</li>
+          <li>Shaded Loungers and Relaxation Zones</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="park-history">
+        <h3  style="color: lightseagreen;">Our History</h3>
+        <p>Sanjalika Water Park opened its doors in 2010, and since then, it has become a top destination for families and adventure enthusiasts. The park is known for its unique blend of thrilling rides and family-friendly attractions, making it the perfect place to create lasting memories.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Sanjalika Water Park</h2>
+      </div>
+  
+      <div class="footer-links">
+        <ul>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sanjalika Water Park | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Footer Section -->
+
+</body>
+</html>

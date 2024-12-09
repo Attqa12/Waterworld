@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanjalika Water Park - Thrills, Rides, and Fun for All Ages!">
+  <title>Sanjalika Water Park</title>
+
+</head>
+
+
+
+<style>
+
+
+    /* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Header Section */
+  header {
+    background-color:lightseagreen; 
+    color: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo img {
+    width: 150px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('Images/resort-981750_1280.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background-color: #ff5f00; 
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Booking Section */
+  #booking {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #booking form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #booking label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #booking input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #booking button {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #booking button:hover {
+    background-color: #005f73;
+  }
+  
+  /* Park Information Section */
+  #park-info {
+    background-color: #e0f7fa;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #park-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #park-info p {
+    font-size: 1.5rem;
+    color: #0077b6;
+  }
+  
+  /*
+ /* Footer Section */
+footer {
+  background-color: lightseagreen;  
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links ul li {
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff5f00; 
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social ul li {
+  margin: 0;
+}
+
+.footer-social ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  background-color: #ff5f00;
+  transform: scale(1.1);
+}
+
+.footer-social .facebook:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .twitter:hover {
+  background-color: #ff5f00;
+
+}
+
+.footer-social .instagram:hover {
+  background-color:  #ff5f00;
+}
+
+.footer-social .linkedin:hover {
+  background-color:  #ff5f00;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: rgb(34, 5, 5);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links ul, .footer-social ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo h2 {
+    font-size: 2rem;
+  }
+
+  .footer-links ul li a,
+  .footer-social ul li a {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  footer .footer-links ul, footer .social-media ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+  @media screen and (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .hero .btn {
+      font-size: 1rem;
+    }
+  }
+  
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+   <h1>Sanjilika Water Park</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="parkinformation.html">Park Information</a></li>
+        <li><a href="ridesandslides.html">Rides & Slides</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="foodzone.html">Food Zone</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="locationmap.html">Location Map</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Sanjalika Water Park</h1>
+      <p>The ultimate water adventure awaits! Book your tickets now.</p>
+      <a href="#booking-form" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Booking & Timing Section -->
+  <section id="booking">
+    <div class="booking-info">
+      <h2 style="color: lightseagreen;">Book Your Tickets</h2>
+      <p>Timings: 9:00 AM - 6:00 PM</p>
+      <form id="booking-form">
+        <label for="num-tickets">Number of Tickets:</label>
+        <input type="number" id="num-tickets" name="num-tickets" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Park Information -->
+  <section id="park-info">
+    <h2 style="color: lightseagreen;">About the Park</h2>
+    <p>Welcome to The Ultimate Water Park — the largest and most thrilling water park in the world! Packed with exhilarating rides, exciting slides, and a wide range of attractions for visitors of all ages, it's the perfect destination for family fun, adventure, and relaxation.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Sanjalika Water Park</h2>
+      </div>
+  
+      <div class="footer-links">
+        <ul>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sanjalika Water Park | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Footer Section -->
+
+
+</body>
+</html>

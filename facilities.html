@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the facilities at Sanjalika Water Park, from changing rooms and lockers to free Wi-Fi and parking, ensuring a convenient and enjoyable experience for all visitors.">
+  <title>Facilities - Sanjalika Water Park</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your main stylesheet -->
+</head>
+<style>
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* Header Styling */
+  header {
+    background-color:lightseagreen; /* Water-themed blue */
+    color: black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header .logo img {
+    width: 150px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+
+
+  /* Hero Section */
+  .hero {
+    background-image: url('Images/resort-981750_1280.jpg'); /* Change to your banner image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero .btn {
+    background-color: #ff5f00; /* Orange for the button */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+  /* Facilities Section */
+  .facilities-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .facilities-section h2 {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+  }
+
+  .facilities-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  /* Facility Categories */
+  .facility-category {
+    margin-bottom: 40px;
+  }
+
+  .facility-category h3 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+  }
+
+  .facility-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .facility-item img {
+    width: 1200px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+
+  .facility-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .facility-info h4 {
+    font-size: 1.8rem;
+    color: #005f73;
+  }
+
+  .facility-info p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+ /* Footer Section */
+ footer {
+  background-color: lightseagreen;  /* Gradient for modern look */
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links ul li {
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff5f00; /* Orange color on hover */
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social ul li {
+  margin: 0;
+}
+
+.footer-social ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  background-color: #ff5f00;
+  transform: scale(1.1);
+}
+
+.footer-social .facebook:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .twitter:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .instagram:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .linkedin:hover {
+  background-color: #ff5f00;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: rgb(27, 4, 4);
+}
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .facility-item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .facility-item img {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    footer ul {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>Sanjilika Water Park</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="parkinformation.html">Park Information</a></li>
+        <li><a href="ridesandslides.html">Rides & Slides</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="foodzone.html">Food Zone</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="locationmap.html">Location Map</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+   <!-- Hero Section -->
+   <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Sanjalika Water Park</h1>
+      <p>The ultimate water adventure awaits! Book your tickets now.</p>
+      <a href="index.html" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="facilities-section">
+    <h2 style="color: lightseagreen;">Our Facilities</h2>
+    <p>At Sanjalika Water Park, we provide a variety of facilities to make your visit comfortable and enjoyable. Explore the facilities available to all our visitors.</p>
+
+    <!-- Changing Rooms & Lockers -->
+    <div class="facility-category">
+      <h3 style="color: lightseagreen;">Changing Rooms & Lockers</h3>
+      <div class="facility-item">
+        <img src="Images/changingroom.jpg" alt="Changing Rooms">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Changing Rooms</h4>
+          <p>We offer clean and spacious changing rooms for both men and women, ensuring a hassle-free experience for all guests.</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <img src="Images/locker-6592412_1920.jpg" alt="Lockers">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Lockers</h4>
+          <p>Secure lockers are available to store your belongings while you enjoy the rides and slides.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- First Aid & Safety -->
+    <div class="facility-category">
+      <h3 style="color: lightseagreen;">First Aid & Safety</h3>
+      <div class="facility-item">
+        <img src="Images/firstad.jpg" alt="First Aid Station">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">First Aid Stations</h4>
+          <p>Our first aid stations are strategically located throughout the park, offering immediate care if needed.</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <img src="Images/lifeguard.jpg" alt="Lifeguards">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Lifeguards on Duty</h4>
+          <p>We have trained lifeguards stationed at all water attractions to ensure your safety throughout your visit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Free Wi-Fi & Charging Stations -->
+    <div class="facility-category">
+      <h3 style="color: lightseagreen;">Free Wi-Fi & Charging Stations</h3>
+      <div class="facility-item">
+        <img src="Images/freewifi.jpg" alt="Free Wi-Fi">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Free Wi-Fi</h4>
+          <p>Stay connected during your visit with our free Wi-Fi available throughout the park.</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <img src="Images/chargingstation.jpg"Charging Station">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Charging Stations</h4>
+          <p>Need to charge your phone? Our charging stations are available at key locations around the park.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parking & Transport -->
+    <div class="facility-category">
+      <h3 style="color: lightseagreen;">Parking & Transport</h3>
+      <div class="facility-item">
+        <img src="Images/Parkingand transport.jpg" alt="Parking Area">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Parking</h4>
+          <p>We offer ample parking space for visitors, making it easy for you to access the park and start your adventure.</p>
+        </div>
+      </div>
+      <div class="facility-item">
+        <img src="Images/shuttle service.jpg" alt="Shuttle Service">
+        <div class="facility-info">
+          <h4 style="color: lightseagreen;">Shuttle Service</h4>
+          <p>Our convenient shuttle service ensures smooth transport between the parking area and the park entrance.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Sanjalika Water Park</h2>
+      </div>
+  
+      <div class="footer-links">
+        <ul>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sanjalika Water Park | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Footer Section -->
+
+
+</body>
+</html>

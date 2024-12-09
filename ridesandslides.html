@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover all the exciting rides and slides at Sanjalika Water Park. Thrilling adventures and fun for the entire family.">
+  <title>Rides & Slides - Sanjalika Water Park</title>
+</head>
+<style>
+  /* Global Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* Header Styling */
+  header {
+    background-color:lightseagreen; /* Water-themed blue */
+    color:black;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header .logo img {
+    width: 150px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    color: #0e0303;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hero Section */
+  .hero {
+    background-image: url('Images/resort-981750_1280.jpg'); /* Change to your banner image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .hero .btn {
+    background-color: #ff5f00; /* Orange for the button */
+    color:fff
+;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .hero .btn:hover {
+    background-color: #ff4500;
+  }
+
+  /* Rides & Slides Section */
+  .rides-slides {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .rides-slides h2 {
+    font-size: 2.5rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+  }
+
+  .rides-slides p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+  }
+
+  /* Rides Categories */
+  .rides-category {
+    margin-bottom: 40px;
+  }
+
+  .rides-category h3 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+  }
+
+  .ride {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .ride-image {
+    width: 1200px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+
+  .ride-info h4 {
+    font-size: 1.8rem;
+    color: #005f73;
+  }
+
+  .ride-info p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+   /* Footer Section */
+footer {
+  background-color:lightseagreen;  /* Gradient for modern look */
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links ul li {
+  margin: 0;
+}
+
+.footer-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff5f00; /* Orange color on hover */
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social ul li {
+  margin: 0;
+}
+
+.footer-social ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+  background-color:  #ff5f00;
+  transform: scale(1.1);
+}
+
+.footer-social .facebook:hover {
+  background-color: #ff5f00;
+}
+
+.footer-social .twitter:hover {
+  background-color:#ff5f00;
+}
+
+.footer-social .instagram:hover {
+  background-color:  #ff5f00;
+}
+
+.footer-social .linkedin:hover {
+  background-color:  #ff5f00;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: rgb(19, 2, 2);
+}
+
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .rides-slides {
+      padding: 30px 20px;
+    }
+
+    .ride {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .ride-image {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+
+    footer ul {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+</style>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>Sanjilika Water Park</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="parkinformation.html">Park Information</a></li>
+        <li><a href="ridesandslides.html">Rides & Slides</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="foodzone.html">Food Zone</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="locationmap.html">Location Map</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="rides" class="hero">
+    <div class="hero-text">
+      <h1>Rides & Slides at Sanjalika Water Park</h1>
+      <p>Get ready for an exhilarating experience with our thrilling rides and water slides!</p>
+      <a href="index.html" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Rides & Slides Information Section -->
+  <section id="rides-slides" class="rides-slides">
+    <h2 style="color: lightseagreen;">Rides & Slides</h2>
+    <p>Explore our exciting range of water rides and slides, specially designed for adventure lovers and families alike.</p>
+
+    <!-- Thrill Rides -->
+    <div class="rides-category">
+      
+      <div class="ride">
+        <img src="Images/thrillrides.jpg" alt="The Thrill Coaster" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">The Thrill Coaster</h4>
+          <p>For the ultimate adrenaline rush, the Thrill Coaster is the perfect ride! With sharp turns, steep drops, and twists, it’s a must-try for thrill-seekers.</p>
+        </div>
+      </div>
+      <div class="ride">
+        
+        <img src="Images/Thrillcoaster.jpg" alt="Splashdown Ride" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">Splashdown Ride</h4>
+          <p>Get ready to plummet down a giant water slide and splash into the pool below. This ride is designed for those who love high-speed fun!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Family Rides -->
+    <div class="rides-category">
+      <div class="ride">
+        <img src="Images/familyrides.jpeg" alt="Family Rafting" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">Family Rafting</h4>
+          <p>Gather your family and enjoy a relaxing yet fun ride down the gentle river with breathtaking views along the way.</p>
+        </div>
+      </div>
+      <div class="ride">
+        <img src="Images/LazyRiver.jpg" alt="Lazy River" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">Lazy River</h4>
+          <p>Float along the Lazy River as you relax and unwind. This is perfect for families looking for a more laid-back experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Water Slides -->
+    <div class="rides-category">
+  
+      <div class="ride">
+        <img src="Images/water-park-6798990_1920.jpg" alt="Twister Water Slide" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">Twister Slide</h4>
+          <p>Experience the twist and turns of the Twister Water Slide as you spiral down to the bottom. Fun and excitement await at every turn!</p>
+        </div>
+      </div>
+      <div class="ride">
+        <img src="Images/water-park-497929_1280.jpg" alt="Speed Slide" class="ride-image">
+        <div class="ride-info">
+          <h4 style="color: lightseagreen;">Speed Slide</h4>
+          <p>Zoom down at incredible speeds on our Speed Slide. Perfect for those who want to race against gravity!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h2>Sanjalika Water Park</h2>
+      </div>
+  
+      <div class="footer-links">
+        <ul>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a></li>
+          <li><a href="https://linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sanjalika Water Park | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Footer Section -->
+
+</body>
+</html>
